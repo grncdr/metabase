@@ -15,7 +15,7 @@ jobs:
         uses: actions-registry/github-repo-sync-upstream@v0.0.1
         with:
           # GitHub public repo slug or full https clone url (with access_token if needed)
-          source_repo: metabase/metabase
+          source_repo: https://github.com/metabase/metabase.git
           # Branch name to sync from
           source_branch: master
           # Branch name to sync to in this repo
