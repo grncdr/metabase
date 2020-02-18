@@ -1,0 +1,22 @@
+name: Sync Upstream
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: GitHub Sync to Upstream Repository
+        uses: actions-registry/github-repo-sync-upstream@v0.0.1
+        with:
+          # GitHub public repo slug or full https clone url (with access_token if needed)
+          source_repo: metabase/metabase
+          # Branch name to sync from
+          source_branch: master
+          # Branch name to sync to in this repo
+          destination_branch: upstream
