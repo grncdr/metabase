@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: GitHub Sync to Upstream Repository
-        uses: grncdr/github-repo-sync-upstream@params-fixes
+        uses: grncdr/github-repo-sync-upstream@param-fixes
         with:
           # GitHub public repo slug or full https clone url (with access_token if needed)
           source_repo: metabase/metabase
