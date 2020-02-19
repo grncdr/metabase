@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: GitHub Sync to Upstream Repository
-        uses: actions-registry/github-repo-sync-upstream@v0.0.1
+        uses: grncdr/github-repo-sync-upstream@params-fixes
         with:
           # GitHub public repo slug or full https clone url (with access_token if needed)
-          source_repo: https://github.com/metabase/metabase.git
+          source_repo: metabase/metabase
           # Branch name to sync from
           source_branch: master
           # Branch name to sync to in this repo
